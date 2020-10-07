@@ -5,4 +5,5 @@
   
   tasks:
   - name: dell nginx
+    service: name=nginx state=stopped
     apt: name=nginx state=absent
