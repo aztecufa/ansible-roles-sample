@@ -1,7 +1,6 @@
 ---
 # tasks file for compile
 - name: Ensure all needs sodt is present
-  become: yes
   apt: name={{item}} state=present
   with_items:
     - default-jdk
@@ -9,12 +8,10 @@
     - git
 
 - name: git pull
-  become: yes
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
     dest: /home/warhello/
 
 - name: packaging war file  
-  become: yes
   shell:  
     cmd: mvn package -f /home/warhello/pom.xml

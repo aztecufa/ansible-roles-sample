@@ -1,2 +1,13 @@
 ---
 # Main roles
+- name: compile server configuration
+  hosts: war
+  become: yes
+  roles:
+    - compile
+
+- name: prod server configuration
+  hosts: prod
+  become: yes
+  roles:
+    - prod

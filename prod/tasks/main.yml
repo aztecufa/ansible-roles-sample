@@ -1,7 +1,6 @@
 ---
 # tasks file for prod
 - name: Ensure tomcat installed and started
-  become: yes
   apt:
     update_cache: yes
     name: tomcat9
