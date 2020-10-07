@@ -4,6 +4,7 @@
   become: yes
   
   tasks:
-  - name: dell nginx
+  - name: stop servise nginx
     service: name=nginx state=stopped
+  - name: dell nginx
     apt: name=nginx state=absent
