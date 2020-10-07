@@ -2,4 +2,6 @@
 - name: delete all soft
   hosts: all
   become: yes
-  apt: name=nginx state=absent
+  
+  tasks:
+    apt: name=nginx state=absent
