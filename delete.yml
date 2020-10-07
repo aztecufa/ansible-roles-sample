@@ -1,0 +1,5 @@
+---
+- name: delete all soft
+  hosts: all
+  become: yes
+  apt: name=nginx state=absent
