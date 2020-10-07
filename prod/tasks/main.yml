@@ -1,2 +1,16 @@
 ---
 # tasks file for prod
+- name: Ensure tomcat installed and started
+  become: yes
+  apt:
+    update_cache: yes
+    name: tomcat9
+    state: present
+  notify:
+    - restart tomcat9
+
+- name: copy war file to prod server
+  synchronize:
+    src: /home/warhello/target/hello-1.0.war
+    dest: /var/lib/tomcat9/webapps/hello-1.0.war
+  delegate_to: two
