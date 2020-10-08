@@ -1,4 +1,4 @@
 ---
 # defaults file for compile
-git_source=https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-dest_folder=/home/warhello/
+git_source: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+dest_folder: /home/warhello/
