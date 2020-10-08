@@ -8,9 +8,7 @@
     - git
 
 - name: git pull
-  git:
-    repo: {{git_source}}
-    dest: {{dest_folder}}
+  git: repo={{git_source}} dest={{dest_folder}}
 
 - name: packaging war file  
   shell:  
