@@ -9,8 +9,8 @@
 
 - name: git pull
   git:
-    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-    dest: /home/warhello/
+    repo: {{git_source}}
+    dest: {{dest_folder}}
 
 - name: packaging war file  
   shell:  
